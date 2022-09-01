@@ -1,0 +1,26 @@
+<div class="header">
+    <b>Online Exam Portal</b>
+</div>
+<div class="topnav">    
+    <button type="submit" class="button submit"(click)="submit()">Submit Test</button>
+</div>
+<div class="side"> 
+    Time Left: <br> 
+    <div id="timer">{{countDiv}}</div> 
+ </div>
+<div class="middle">
+    <p>{{questionIndex+1}}. {{questions[questionIndex].question}}</p><br>
+    <input type="radio" id="option1" name="options" value="{{questions[questionIndex].option_1}}" [(ngModel)]="userResponse[questionIndex].userAnswer">{{questions[questionIndex].option_1}}<br>
+    <input type="radio" id="option2" name="options" value="{{questions[questionIndex].option_2}}" [(ngModel)]="userResponse[questionIndex].userAnswer">{{questions[questionIndex].option_2}}<br>
+    <input type="radio" id="option3" name="options" value="{{questions[questionIndex].option_3}}" [(ngModel)]="userResponse[questionIndex].userAnswer">{{questions[questionIndex].option_3}}<br>
+    <input type="radio" id="option4" name="options" value="{{questions[questionIndex].option_4}}" [(ngModel)]="userResponse[questionIndex].userAnswer">{{questions[questionIndex].option_4}}<br>
+
+    <button *ngIf="questionIndex!=0" class="button" value="prev" (click)="prevQues()">Previous</button>
+    <button *ngIf="questionIndex<questions.length-1"  class="button" value="next" (click)="nextQues()">Next</button>
+</div>
+
+<footer>
+    <p></p>
+</footer>
+
+

@@ -1,0 +1,24 @@
+<app-top-bar></app-top-bar>
+<div class="form">
+  <h2>LOGIN</h2><br>
+<form #form="ngForm" (ngSubmit)="loginFormSubmit()" >
+        <label for="email"> Email* </label>
+        <input type="text" #em="ngModel" [(ngModel)]="login.email" placeholder="Enter email" name="email" id="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" class="input" required/><br>
+        <div *ngIf="email.invalid && (email.dirty||email.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="email.errors['required']">Email is required</span>
+          <span id="s1" *ngIf="email.errors['pattern']">Please enter a valid Email</span>
+         </div> 
+        <label for="password"> Password* </label>
+        <input type="password" [(ngModel)]="login.password" placeholder="Enter password" name="password" id="password" #password="ngModel"class="input" minlength="6" required/><br>
+        <div *ngIf="password.invalid && (password.dirty||password.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="password.errors['required']">Password is required</span>
+          <span id="s1" *ngIf="password.errors['minlength']">Password length should be atleast 6</span>
+         </div> 
+        <br>
+        <a href="forgot" class="a2">Forgot Password ?</a><br>
+        <button [disabled]="form.invalid" type="submit">Login</button><br>
+        <a routerLink="/register-here" class="a1">New User ? Register here </a><br>
+  </form>
+</div>
+  
+  

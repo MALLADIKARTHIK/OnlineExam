@@ -1,0 +1,74 @@
+<app-top-bar></app-top-bar>
+<div class="form">
+  <h2>Register</h2><br>
+<form #form="ngForm" (ngSubmit)="RegisterFormSubmit()" >
+        <label for="full_name"> Full Name </label>
+        <input type="text" #em="ngModel" [(ngModel)]="userDetails.full_name" placeholder="Enter full name" name="full_name" id="full_name" #full_name="ngModel" pattern="[A-Za-z\s]*" class="input" required/><br>
+        <div *ngIf="full_name.invalid && (full_name.dirty||full_name.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="full_name.errors['required']">Full Name is required</span>
+          <span id="s1" *ngIf="full_name.errors['pattern']">Please enter a valid Full Name</span>
+         </div> 
+
+        <label for="email"> Email </label>
+        <input type="text" [(ngModel)]="userDetails.email" placeholder="Enter email" name="email" id="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" class="input" required/><br>
+        <div *ngIf="email.invalid && (email.dirty||email.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="email.errors['required']">Email is required</span>
+          <span id="s1" *ngIf="email.errors['pattern']">Please enter a valid Email</span>
+         </div> 
+        <label for="password"> Password </label>
+        <input type="password" [(ngModel)]="userDetails.password" placeholder="Enter password" name="password" id="password" #password="ngModel" minlength="6" class="input" required/><br>
+        <div *ngIf="password.invalid && (password.dirty||password.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="password.errors['required']">Password is required</span>
+          <span id="s1" *ngIf="password.errors['minlength']">Password length should be atleast 6</span>
+         </div> 
+
+        <label for="mobileNo"> Mobile Number </label>
+        <input type="text" [(ngModel)]="userDetails.mobileNo" placeholder="Enter mobile number" name="mobileNo" id="mobileNo" #mobileNo="ngModel" minlength="10" maxlength="10" class="input" required/><br>
+        <div *ngIf="mobileNo.invalid && (mobileNo.dirty||mobileNo.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="mobileNo.errors['required']">Mobile Number is required</span>
+          <span id="s1" *ngIf="mobileNo.errors['minlength']">Mobile Number should be 10 digits</span>
+          <span id="s1" *ngIf="mobileNo.errors['maxlength']">Mobile Number should be 10 digits</span>
+         </div> 
+
+        <label for="dob"> Date of Birth </label>
+        <input type="text" [(ngModel)]="userDetails.dob" placeholder="Enter date of birth" name="dob" id="dob" #dob="ngModel" class="input" required/><br>
+        <div *ngIf="dob.invalid && (dob.dirty||dob.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1"*ngIf="dob.errors['required']">Date of birth is required</span>
+          
+        </div>
+        <label for="city"> City </label>
+        <input type="text" [(ngModel)]="userDetails.city" placeholder="Enter city" name="city" class="input" id="city" #city="ngModel" pattern="[A-Za-z\s]*" required/><br>
+        <div *ngIf="city.invalid && (city.dirty||city.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="city.errors['required']">City is required</span>
+          <span id="s1" *ngIf="city.errors['pattern']">please enter a valid city</span>
+         </div> 
+        <label for="state"> State </label>
+        <input type="text" [(ngModel)]="userDetails.state" placeholder="Enter state" name="state" class="input" id="state" #state="ngModel" pattern="[A-Za-z\s]*"  required/><br>
+        <div *ngIf="state.invalid && (state.dirty||state.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="state.errors['required']">State is required</span>
+          <span id="s1" *ngIf="state.errors['pattern']">please enter a valid State</span>
+         </div> 
+        <label for="qualification"> Qualification </label>
+        <input type="text" [(ngModel)]="userDetails.qualification" placeholder="Enter qualification" name="qualification" id="qualification" #qualification="ngModel" pattern="[A-Za-z\s]*"class="input" required/><br>
+        <div *ngIf="qualification.invalid && (qualification.dirty||qualification.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="qualification.errors['required']">Qualification is required</span>
+          <span id="s1" *ngIf="qualification.errors['pattern']">please enter a valid Qualification</span>
+         </div> 
+
+        <label for="yearOfCompletion"> Year of Completion </label>
+        <input type="text" [(ngModel)]="userDetails.yearOfCompletion" placeholder="Enter yearOfCompletion" name="yearOfCompletion" id="yearOfCompletion" #yearOfCompletion="ngModel" pattern="[0-9]*" maxlength="4" minlength="4" class="input" required/><br>
+        <div *ngIf="yearOfCompletion.invalid && (yearOfCompletion.dirty||yearOfCompletion.touched)" style="color: rgb(255, 255, 255);">
+          <span id="s1" *ngIf="yearOfCompletion.errors['required']">Year is required</span>
+          <span id="s1" *ngIf="yearOfCompletion.errors['pattern']">please enter a valid year</span>
+          <span id="s1" *ngIf="yearOfCompletion.errors['minlength']">please enter 4 digits</span>
+          <span id="s1" *ngIf="yearOfCompletion.errors['maxlength']">please enter 4 digits only</span>
+         </div> 
+        
+        
+        
+        <button [disabled]="form.invalid" type="submit"> Register </button><br>
+        
+  </form>
+</div>
+  
+  

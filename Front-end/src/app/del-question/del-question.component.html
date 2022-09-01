@@ -1,0 +1,17 @@
+<app-top-bar></app-top-bar>
+<html>
+ 
+  <div class="a">
+    <h2>DELETE QUESTIONS</h2>
+  <form (ngSubmit)="deleteQues(del.question_id)">
+   
+    <h4>Enter the Question Id to Delete</h4>
+    Question Id:<input type="text" [(ngModel)]="del.question_id" name="question_id" required/><br>
+    <button class="button" [routerLink]="['/admin-dashboard/list']"> view question </button>
+    <button class="button" type="submit">Submit </button><br><br>
+    <button class="button" [routerLink]="['/admin-dashboard']"> Dashboard </button>
+  </form>
+
+</div>
+
+</html>

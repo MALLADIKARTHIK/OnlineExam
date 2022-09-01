@@ -1,0 +1,137 @@
+.header {
+    background-color: rgb(63, 181, 202);
+    padding: 20px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+  }
+
+ .topnav {
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .side {
+      float: left;
+      padding: 20px;
+      width: 25%;
+      background-color: rgb(63, 181, 202);
+      height: 475px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+  }
+  
+  .middle {
+    float: left;
+    padding: 20px;
+    width: 75%;
+    background-color: #f1f1f1;
+    height: 475px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    position:relative;
+  }
+  
+  .side::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  
+  .button {    
+    background-color: lightblue; 
+    color: black; 
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;   
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer; 
+}
+
+.prev {
+    position: relative;
+    bottom: -100px;
+    right: -300px;
+}
+
+.next {
+    position: relative;
+    bottom: -100px;
+    left: 325px;
+}
+
+.submit {
+    float:right;
+}
+
+.button:hover {
+    background-color: steelblue;
+    color: white;
+  }
+
+  footer {
+    background-color:darkblue;
+    padding: 15px;
+    text-align: center;
+    color: white;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font: normal bold 16px/normal ;   
+}
+
+article {
+    width: 300px;
+    text-align: center;
+    background-color: #68b04d;
+    border-radius: 10px;
+    margin: 50px auto 20px;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+ #timer{
+    padding: 20px;
+    color: crimson;
+    background-color: aliceblue;
+    border-radius: 2px;
+    text-align: center;
+}
+
+b{
+  font-size: 20px;
+}

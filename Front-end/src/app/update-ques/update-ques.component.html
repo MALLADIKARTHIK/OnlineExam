@@ -1,0 +1,22 @@
+<app-top-bar></app-top-bar>
+
+<html>
+  <div class="a">
+  <button class="button" [routerLink]="['/admin-dashboard/list']"> view question </button>
+
+  <form [formGroup]='qform' (ngSubmit)="updateQues()">
+    Question Id:<input type="text" formControlName="question_id" name="question_id" required/><br>
+    Course Id:<input type="text" formControlName="course_id" name="course_id" required/><br>
+    Level Id:<input type="text" formControlName="level_id" name="level_id" required/><br>
+    Question:<input type="text" formControlName="question" name="question" required/><br>
+    Option 1:<input type="text" formControlName="option_1" name="option_1" required/><br>
+    Option 2:<input type="text" formControlName="option_2" name="option_2" required/><br>
+    Option 3:<input type="text" formControlName="option_3" name="option_3" required/><br>
+    Option 4:<input type="text" formControlName="option_4" name="option_4" required/><br>
+    Correct Option:<input type="text" formControlName="correct_option" name="correct_option" required/><br>
+    <button class="button" type="submit">Submit </button>
+    <button class="button" [routerLink]="['/admin-dashboard']"> Dashboard </button>
+  </form>
+</div>
+</html>
+

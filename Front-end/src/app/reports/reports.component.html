@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<app-top-bar></app-top-bar>
+
+<body>
+    <div class="w3-container">
+        <h2>USER REPORT</h2>
+    <table class="w3-table-all w3-centered" border="4">
+        <tr>
+            <th>USER ID</th>
+            <th>TEST ID</th>
+            <th>TEST NAME</th>
+            <th>LEVEL_1 SCORE</th>
+            <th>LEVEL_2 SCORE</th>
+            <th>LEVEL_3 SCORE</th>
+          </tr>
+          <tr *ngFor="let report of reports">
+            <td>{{userid}}</td>
+            <td>{{report['test_id']}}</td>
+            <td *ngIf="report['test_id'] == 168">Java</td>
+            <td *ngIf="report['test_id'] == 169">Python</td>
+            <td *ngIf="report['test_id'] == 170">SQL Development</td>
+
+           <!-- <td *ngIf="report.course_id == 102">Python</td>
+            <td *ngIf="report.course_id == 103">.Net</td>
+            <td *ngIf="report.course_id == 104">C</td>
+            <td *ngIf="report.course_id == 105">PHP</td>
+            <td *ngIf="report.course_id == 106">C++</td> -->
+            
+            <!--<td>{{report['test_name']}}</td>-->
+            <td>{{report['level1_score']}}</td> 
+            <td>{{report['level2_score']}}</td> 
+            <td>{{report['level3_score']}}</td>
+        </tr>
+        <!--<tr *ngFor="let report of reports">
+            <td>{{userid}}</td>
+            <td *ngIf="report.course_id == 101">Java</td>
+            <td *ngIf="report.course_id == 102">Python</td>
+            <td *ngIf="report.course_id == 103">.Net</td>
+            <td *ngIf="report.course_id == 104">C</td>
+            <td *ngIf="report.course_id == 105">PHP</td>
+            <td *ngIf="report.course_id == 106">C++</td> 
+            <td>{{report.level_1}}</td> 
+            <td>{{report.level_2}}</td> 
+            <td>{{report.level_3}}</td> 
+        </tr>-->
+    </table>
+</div>
+</body>

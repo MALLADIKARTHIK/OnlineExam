@@ -1,0 +1,9 @@
+<div class="topbar">
+    <a href="#" class="active" >Home</a>
+    <a href="admin_login" *ngIf="sessionUser==null && sessionAdmin==null" >Admin</a>
+    <a href="admin-dashboard" *ngIf="sessionUser==null && sessionAdmin!=null" >Admin Dashboard</a>
+    <a href="user-dashboard" *ngIf="sessionUser!=null && sessionAdmin==null">User Dashboard</a>
+    <a href="user_login" class="right" *ngIf="sessionUser==null && sessionAdmin==null">Login</a>
+    <a href="#" class="right" (click)="logout()"  *ngIf="sessionUser!=null || sessionAdmin!=null" >Logout</a>
+    <a href="user_registration"  class="right" *ngIf="sessionUser==null && sessionAdmin==null" >Register</a>
+  </div>

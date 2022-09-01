@@ -1,0 +1,44 @@
+button{
+    font-weight: bold;
+    padding :8px;
+    border-radius: 5px;
+    width: 4cm;
+    margin-inline-start: 37%;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+button:hover{
+    background-color: rgb(43, 80, 43);
+    color: white;
+}
+
+p{
+    margin-inline-start: 27%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+#text{
+    margin-inline-start: 42%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 15px;
+}
+
+#card-body{
+    width:20cm;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-inline-start: 21%;
+    margin-top: 10px;
+}
+#text1{
+    margin-inline-start: 27%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}

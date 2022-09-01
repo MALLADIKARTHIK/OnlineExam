@@ -1,0 +1,10 @@
+
+<div id="card-body">
+    <p id="text">Thank You!! </p>
+   <p id="text1">Your score is "{{marks}}" out of 50</p>
+<p>You have cleared the level {{levelid}}</p>
+<div *ngIf="levelid<3"><p>You can Proceed to level {{levelid+1}}</p></div><br>
+
+<div *ngIf="levelid<3"><button (click)="newExam()" class="btn btn-primary btn-sm" >Level {{levelid+1}}</button></div><br> <br>
+<div *ngIf="levelid==3"><button (click)="completed()" class="btn btn-secondary btn-sm">Back to dashboard</button></div> <br> <br>
+</div>

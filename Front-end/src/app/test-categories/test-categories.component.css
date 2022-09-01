@@ -1,0 +1,51 @@
+.square {
+    float:left;
+    position: relative;
+    width: 30%;
+    height:200px;
+    margin:1.66%;
+    background-color:white;
+    overflow:hidden;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;    
+}
+
+.content {
+    position:absolute;
+    height:90%; 
+    width:90%; 
+    padding: 6%;    
+}
+p {
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+}
+body {
+    font-size:20px;
+    font-family: 'Lato',verdana, sans-serif;
+    color: #fff;
+    background:#ECECEC;
+}
+
+.button {    
+    background-color: lightblue; 
+    color: black; 
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;   
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-items: center;
+  }
+    
+  .button:hover {
+    background-color: steelblue;
+    color: white;
+  }

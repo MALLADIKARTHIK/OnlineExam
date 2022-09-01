@@ -1,0 +1,20 @@
+<app-top-bar></app-top-bar>
+<html>
+  <div class="a">
+  <form (ngSubmit)="createQues()">
+    <h1>Add Questions</h1>
+    Course Id:<input type="text" [(ngModel)]="add.course_id" name="course_id" required/><br>
+    Level Id:<input type="text" [(ngModel)]="add.level_id" name="level_id" required/><br>
+    Question:<input type="text" [(ngModel)]="add.question" name="question"/><br>
+    Option 1:<input type="text" [(ngModel)]="add.option_1" name="option_1"/><br>
+    Option 2:<input type="text" [(ngModel)]="add.option_2" name="option_2"/><br>
+    Option 3:<input type="text" [(ngModel)]="add.option_3" name="option_3"/><br>
+    Option 4:<input type="text" [(ngModel)]="add.option_4" name="option_4"/><br>
+    Correct Option:<input type="text" [(ngModel)]="add.correct_option" name="correct_option" required/><br>
+    <button class="button" type="submit">Submit </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="button" [routerLink]="['/admin-dashboard']"> Dashboard </button> 
+
+  </form>
+</div>
+</html>
+

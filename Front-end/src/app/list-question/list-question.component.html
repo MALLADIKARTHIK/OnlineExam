@@ -1,0 +1,44 @@
+<app-top-bar></app-top-bar>
+<html>
+  <div class="a">
+  <form (ngSubmit)="ListAllQues(list.course_id,list.level_id)">
+  
+    Course Id:<input type="text" [(ngModel)]="list.course_id" name="course_id" required/><br>
+    Level Id:<input type="text" [(ngModel)]="list.level_id" name="level_id" required/> &nbsp;&nbsp;
+
+     <button class="button" type="submit">List</button>
+  </form>
+  </div>
+<!-- <button (click)="ListAllQues(q.course_id,q.level_id)">List</button> --> 
+
+<table class="myTable">
+  <tr>
+    <th>Question Id</th>
+    <th>Course Id</th>
+    <th>Level Id</th>
+    <th>Question</th>
+    <th>Option 1</th>
+    <th>Option 2</th>
+    <th>Option 3</th>
+    <th>Option 4</th>
+    <th>Correct Option</th>
+    <th>operation</th>
+  </tr>
+  <tr *ngFor="let q of listItem">
+    <td>{{q.question_id}}</td>
+    <td>{{q.course_id}}</td>
+    <td>{{q.level_id}}</td>
+    <td>{{q.question}}</td>
+    <td>{{q.option_1}}</td>
+    <td>{{q.option_2}}</td>
+    <td>{{q.option_3}}</td>
+    <td>{{q.option_4}}</td>
+    <td>{{q.correct_option}}</td>
+    <td><button class="nav-item" [routerLink]="['/admin-dashboard/del']"> Delete </button>&nbsp;&nbsp;
+    <!--<td><button class="nav-item" [routerLink]="['/up']"> update </button></td>-->
+    <button type="submit" (click)="editQues(q)">update</button>
+</tr>
+</table>
+
+<router-outlet></router-outlet>
+</html>
